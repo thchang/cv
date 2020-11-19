@@ -1,5 +1,5 @@
 % Standard preamble
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 \usepackage{geometry, hyperref}
 \usepackage[resetlabels]{multibib}
 \newcites{pubs,inps,subs,talks}
@@ -38,61 +38,56 @@ top=0.75in}
 
 \begin{tabular}{ll}
    Argonne National Laboratory & Email: tchang@anl.gov\\
-   Mathematics and Computer Science Division & Phone: TBD\\
+   Mathematics and Computer Science Division
+      & Website: \url{http://thchang.github.io}\\
    9700 S.\ Cass Ave.\ Bldg.\ 240, Lemont, IL 60439
-      & Web: \url{http://thchang.github.io} \\
+      & GitHub: \url{http://github.com/thchang} \\
 \end{tabular}
 
 % Begin document
 \section*{Research Interests}
 
-Numerical optimization, approximation theory, mathematical software,
-algorithms, and parallel computing for applications in scientific computing,
+Numerical optimization, interpolation and regression, algorithms, and
+parallel computing for applications in scientific computing,
 data science, and engineering design.
 
 \section*{Education}
 
-\begin{tabular}{lcl}
-Ph.D. & 2020 & Computer Science and Applications, Virginia Tech\\
-& & Thesis: 
-\href{http://hdl.handle.net/10919/98915}
-{\it Mathematical Software for Multiobjective Optimization Problems}\\
-& & Advisor: Layne T.\ Watson\\
-& \\
-B.S. & 2016 & Computer Science \& Mathematics,
-Virginia Wesleyan University, \textit{Summa Cum Laude}\\
-\end{tabular}
+Ph.D., 2020, Computer Science and Applications, Virginia Tech
+
+\medskip
+
+B.S., 2016, Computer Science \& Mathematics,
+Virginia Wesleyan University, \textit{Summa Cum Laude}
 
 \section*{Research Experience}
 
-(June, 2020 -- Present)\\
-\textbf{Postdoctoral Appointee: Argonne National Lab},
-Mathematics \& Computer Science (MCS) Division.
+\hangafter=1
+\hangindent=0.3in
+(June, 2020 -- Present)
+\textbf{Postdoctoral Appointee: Argonne National Laboratory},
+Mathematics and Computer Science (MCS) Division.
 \bullitem R\&D in multiobjective optimization for scientific applications.
 
 \medskip
 
-(Aug, 2016 -- May, 2020)\\
-\textbf{Cunningham Doctoral Fellow: Virginia Tech}, Dept.\ of Computer Science.
+\hangafter=1
+\hangindent=0.3in
+(Aug, 2016 -- May, 2020)
+\textbf{Cunningham Doctoral Fellow: Virginia Tech},
+Dept.\ of Computer Science.
 \bullitem
-R\&D in numerical analysis, mathematical software, parallel computing,
-algorithms, and data science.
+R\&D in numerical analysis, math software,
+algorithms, parallel computing, and data science.
 \bullitem
-Math \& Algorithms team on the VarSys project: a NSF funded study of
+Math \& Algorithms team of VarSys project: NSF funded study of
 HPC performance variability.
 
 \medskip
 
-(June -- Dec, 2019)\\
-\textbf{DOE SCGSR Awardee: Argonne National Lab}, MCS
-Division (see awards).
-\bullitem
-R\&D of multiobjective optimization software for computationally expensive
-blackbox problems.
-
-\medskip
-
-(Feb -- Aug, 2016)\\
+\hangafter=1
+\hangindent=0.3in
+(Feb -- Aug, 2016)
 \textbf{Research Assistant: Old Dominion University},
 Dept.\ of Computer Science.
 \bullitem
@@ -101,15 +96,18 @@ NVIDIA GPUs.
 
 \medskip
 
-(Summer 2014, Winter 2014, Summer 2015, \& Winter 2015)\\
-\textbf{Intern: US Army Research Labs}, Guidance Tech.\ Branch (GTB)
-\& Computational Sci.\ Div.\ (CSD).
+\hangafter=1
+\hangindent=0.3in
+(Summer 2014, Winter 2014, Summer 2015, \& Winter 2015)
+\textbf{Intern: US Army Research Labs}, 
+Computational Science Division (CSD) and Guidance Technology Branch (GTB).
 \bullitem
 CSD --- R\&D in autonomous driving (Summer 2015) \&
 virtual reality (Winter 2015).
 \bullitem
 GTB --- R\&D in computer vision (Summer 2014) \& embedded systems (Winter 2014).
 
+\newpage
 \section*{Awards}
 
 \textbf{Cunningham Doctoral Fellow} (2016--2020).
@@ -132,9 +130,24 @@ Award based on peer review of proposal by scientific experts.
 The Pratt fellowship is a supplemental award given by
 the College of Engineering on a per-year basis.
 
-\textbf{Outstanding Student in Computer Science and Mathematics} (2016).
-During Spring Convocation, one or two outstanding from each department
-are recognized by Virginia Wesleyan University.
+\section*{Publicly Available Software}
+
+\textbf{DELAUNAYSPARSE} is an open source software package
+for computing the Delaunay interpolant in medium to high dimensions.
+Both serial and parallel (\texttt{OpenMP}) drivers are available
+with interfaces available for
+\texttt{Fortran},
+\texttt{C/C++},
+\texttt{Python 3.6+},
+and batch/command line.
+The download is available from \url{https://vtopt.github.io/DelaunaySparse}
+or from GitHub \url{https://github.com/vtopt/DelaunaySparse}.
+
+\textbf{QAML} is a \texttt{Python} package for embedding polynomial sum of
+squares minimization problems (with real, integer, or boolean variables) on
+the \texttt{D-Wave 2000Q} system.
+The project can be cloned or forked from GitHub
+\url{https://github.com/tchlux/qaml}.
 
 \nocitepubs{*}
 \nociteinps{*}
