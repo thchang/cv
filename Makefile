@@ -1,15 +1,23 @@
-BIBS = pubs.bib inps.bib subs.bib talks.bib
+FULLBIBS = pubs.bib inps.bib subs.bib talks.bib
+SHORTBIBS = shortlist.bib
 
-all : TylerChangCV.pdf
+all : fullcv.pdf shortcv.pdf
 
-TylerChangCV.pdf : TylerChangCV.tex $(BIBS)
-	pdflatex TylerChangCV.tex
+fullcv.pdf : fullcv.tex $(FULLBIBS)
+	pdflatex fullcv.tex
 	bibtex pubs.aux
 	bibtex inps.aux
 	bibtex subs.aux
 	bibtex talks.aux
-	pdflatex TylerChangCV.tex
-	pdflatex TylerChangCV.tex
+	pdflatex fullcv.tex
+	pdflatex fullcv.tex
+	rm -f *.bbl *.aux *.blg *.out
+
+shortcv.pdf : shortcv.tex $(SHORTBIBS)
+	pdflatex shortcv.tex
+	bibtex shortlist.aux
+	pdflatex shortcv.tex
+	pdflatex shortcv.tex
 	rm -f *.bbl *.aux *.blg *.out
 
 clean :

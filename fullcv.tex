@@ -1,0 +1,198 @@
+% Standard preamble
+\documentclass[12pt]{article}
+\usepackage{geometry, hyperref}
+\usepackage[resetlabels]{multibib}
+\newcites{pubs,inps,subs,talks}
+{Peer-Reviewed Publications,In Press,Under Review,Contributed Talks}
+
+\makeatletter
+\def\@biblabel#1{}
+\makeatother
+
+%pagestyle
+% US STYLE
+\geometry{
+letterpaper,
+total={7in,9.5in},
+left=0.75in,
+top=0.75in}
+% EUROPEAN STYLE
+%\geometry
+%{
+% a4paper,
+% total={170mm,280mm},
+% left=20mm,
+% top=10mm,
+%}
+\parindent = 0pt
+\parskip = 6pt
+
+% Define bullet
+\def\bullitem{\par\hangindent=15pt \hangafter=1
+\noindent\hbox to 20pt{\hfil$\bullet$\hfil}\ignorespaces}
+
+\begin{document}
+
+% Header/Contact Info
+{\Large \textbf{Tyler H.\ Chang}}
+
+\begin{tabular}{ll}
+   Argonne National Laboratory & Email: tchang@anl.gov\\
+   Mathematics and Computer Science Division
+      & Website: \url{http://thchang.github.io}\\
+   9700 S.\ Cass Ave.\ Bldg.\ 240, Lemont, IL 60439
+      & GitHub: \url{http://github.com/thchang} \\
+\end{tabular}
+
+% Begin document
+\section*{Research Interests}
+
+Numerical optimization, interpolation and regression, algorithms, and
+parallel computing for applications in scientific computing,
+data science, and engineering design.
+
+\section*{Education}
+
+Ph.D., 2020, Computer Science,
+Virginia Polytechnic Institute \& State University
+(Virginia Tech)
+
+\medskip
+
+B.S., 2016, Computer Science \& Mathematics,
+Virginia Wesleyan University, \textit{Summa Cum Laude}
+
+\section*{Research Experience}
+
+\hangafter=1
+\hangindent=0.3in
+(June, 2020 -- Present)
+\textbf{Postdoctoral Appointee: Argonne National Lab},
+Mathematics and Computer Science (MCS) Division.
+\bullitem R\&D in multiobjective optimization for scientific applications.
+
+\medskip
+
+\hangafter=1
+\hangindent=0.3in
+(Aug, 2016 -- May, 2020)
+\textbf{Cunningham Fellow: Virginia Tech},
+Dept.\ of Computer Science.
+\bullitem
+R\&D in numerical analysis, math software,
+algorithms, parallel computing, and data science.
+\bullitem
+Math \& Algorithms team of VarSys project: NSF funded study of
+HPC performance variability.
+
+\medskip
+
+\hangafter=1
+\hangindent=0.3in
+(Feb -- Aug, 2016)
+\textbf{Research Assistant: Old Dominion University},
+Dept.\ of Computer Science.
+\bullitem
+R\&D in GPU computing and parallelization of NASA's FUN3D CFD kernel on
+NVIDIA GPUs.
+
+\medskip
+
+\hangafter=1
+\hangindent=0.3in
+(Summer 2014, Winter 2014, Summer 2015, \& Winter 2015)
+\textbf{Intern: US Army Research Labs}, 
+Computational Science Division (CSD) and Guidance Technology Branch (GTB).
+\bullitem
+CSD --- R\&D in autonomous driving (Summer 2015) \&
+virtual reality (Winter 2015).
+\bullitem
+GTB --- R\&D in computer vision (Summer 2014) \& embedded systems (Winter 2014).
+
+\newpage
+\section*{Awards}
+
+\textbf{Cunningham Doctoral Fellowship} (2016--2020).
+The 
+\href{https://graduateschool.vt.edu/funding/types-of-funding/funding-sponsored-by-the-graduate-school/cunningham-doctoral-assistantships.html}
+{Cunningham doctoral fellowship} is a Virginia Tech graduate school wide
+award, guaranteeing 4 years of research funding.
+
+\textbf{Davenport Leadership Fellowship} (2016--17 \& 2019--20).
+The Davenport leadership fellowship is a supplemental award given by
+the College of Engineering on a per-year basis.
+
+\textbf{DOE SCGSR Awardee} (2019).
+One of 70 proposals funded by the United States Dept.\ of Energy,
+Office of Science Graduate Student Research program, during the
+\href{https://www.energy.gov/articles/doe-s-science-graduate-student-research-program-selects-70-students-pursue-research-doe}{2018, 2nd call for proposals}.
+Award based on peer review of proposal by scientific experts.
+
+\textbf{Pratt Fellowship} (2017--18 \& 2018--19).
+The Pratt fellowship is a supplemental award given by
+the College of Engineering on a per-year basis.
+
+\section*{Publicly Available Software}
+
+\textbf{DELAUNAYSPARSE} is an open source software package
+for computing the Delaunay interpolant in medium to high dimensions.
+Both serial and parallel (\texttt{OpenMP}) drivers are available
+with interfaces available for
+\texttt{Fortran},
+\texttt{C/C++},
+\texttt{Python 3.6+},
+and batch/command line.
+The download is available from \url{https://vtopt.github.io/DelaunaySparse}
+or from GitHub \url{https://github.com/vtopt/DelaunaySparse}.
+
+\textbf{QAML} is a \texttt{Python} package for embedding polynomial sum of
+squares minimization problems (with real, integer, or boolean variables) on
+the \texttt{D-Wave 2000Q} system.
+The project can be cloned or forked from GitHub
+\url{https://github.com/tchlux/qaml}.
+
+\nocitepubs{*}
+\nociteinps{*}
+\nocitesubs{*}
+\nocitetalks{*}
+\bibliographystylepubs{cv}
+\bibliographystyleinps{cv}
+\bibliographystylesubs{cv}
+\bibliographystyletalks{cv}
+\bibliographypubs{pubs}
+\bibliographyinps{inps}
+\bibliographysubs{subs}
+\bibliographytalks{talks}
+
+\section*{Professional Activities}
+
+\textbf{Referee:} For
+Journal of Machine Learning Research (2019) and
+IEEE SoutheastCon (2018 -- 2020).
+
+\textbf{Session Vice-Chair:} IEEE SoutheastCon (2018).
+
+\textbf{Membership:} ACM (2015 -- Present), SIAM (2016 -- Present), and
+SCS (2020 -- Present).
+
+\textbf{Counselor / Founding Member:} Virginia Tech CS Graduate Counsel 
+(Fall, 2017 -- Fall, 2019).
+Organizing professional, social, and informative events for
+current and prospective graduate students.
+
+\section*{Teaching Experience}
+
+(Spring, 2020)
+\textbf{Instructor: Virginia Tech}, Dept.\ of Computer Science.
+\bullitem
+Instructor for {\it CS 3114: Data Structures and Algorithms}.
+
+\medskip
+
+(Spring, 2013 -- Fall, 2015)
+\textbf{Subject Tutor: Virginia Wesleyan University}, Learning Center.
+\bullitem
+Subject tutor for undergraduate courses in calculus, computer science, and
+statistics.
+
+\end{document} 
