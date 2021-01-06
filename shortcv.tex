@@ -1,9 +1,9 @@
 % Standard preamble
-\documentclass[12pt]{article}
-\usepackage{geometry, hyperref}
+\documentclass[11pt]{article}
+\usepackage{geometry, hyperref, sectsty}
 \usepackage[resetlabels]{multibib}
-\newcites{shortlist}
-{Selected Publications (from 16 total)}
+\newcites{shortlist,subs}
+{Selected Publications (from 16 total),Under Review}
 
 \makeatletter
 \def\@biblabel#1{}
@@ -26,6 +26,7 @@ top=0.75in}
 %}
 \parindent = 0pt
 \parskip = 6pt
+\sectionfont{\fontsize{13.2}{6}\selectfont}
 
 % Define bullet
 \def\bullitem{\par\hangindent=15pt \hangafter=1
@@ -34,10 +35,11 @@ top=0.75in}
 \begin{document}
 
 % Header/Contact Info
-{\Large \textbf{Tyler H.\ Chang}}
+{\large \textbf{Tyler H.\ Chang}}
 
 \begin{tabular}{ll}
-   Argonne National Laboratory & Email: tchang@anl.gov\\
+   Argonne National Laboratory
+      & Email: \href{mailto:tchang@anl.gov}{tchang@anl.gov}\\
    Mathematics and Computer Science Division
       & Website: \url{http://thchang.github.io}\\
    9700 S.\ Cass Ave.\ Bldg.\ 240, Lemont, IL 60439
@@ -45,9 +47,9 @@ top=0.75in}
 \end{tabular}
 
 % Begin document
-\section*{Primary Interests}
-
-Optimization, machine learning, algorithms, and parallel computing.
+%\section*{Primary Interests}
+%
+%Optimization, machine learning, algorithms, and parallel computing.
 
 \section*{Education}
 
@@ -67,7 +69,10 @@ Virginia Wesleyan University, \textit{Summa Cum Laude}
 (June, 2020 -- Present)
 \textbf{Postdoctoral Appointee: Argonne National Lab},
 Mathematics and Computer Science (MCS) Division.
-\bullitem R\&D in multiobjective optimization for scientific applications.
+\bullitem R\&D in multiobjective optimization, parallel computing, and
+scientific software.
+\bullitem Member of FASTMATH: A SciDAC institute spanning
+5 national labs and 5 universities.
 
 \medskip
 
@@ -80,8 +85,18 @@ Dept.\ of Computer Science.
 R\&D in numerical analysis, math software,
 algorithms, parallel computing, and data science.
 \bullitem
-Math \& Algorithms team of VarSys project: NSF funded study of
+Math \& Algorithms team in VarSys: A NSF funded study of
 HPC performance variability.
+
+\medskip
+
+\hangafter=1
+\hangindent=0.3in
+(June, 2019 -- Dec, 2019)
+\textbf{SCGSR Awardee: Argonne National Lab}, MCS Division.
+\bullitem
+R\&D in multiobjective optimization, funded via ORAU/ORISE
+(see awards for details).
 
 \medskip
 
@@ -96,71 +111,80 @@ NVIDIA GPUs.
 
 \medskip
 
-\hangafter=1
-\hangindent=0.3in
-(Summer 2014, Winter 2014, Summer 2015, \& Winter 2015)
-\textbf{Intern: US Army Research Labs}, 
-Computational Science Division (CSD) and Guidance Technology Branch (GTB).
-\bullitem
-CSD --- R\&D in autonomous driving (Summer 2015) \&
-virtual reality (Winter 2015).
-\bullitem
-GTB --- R\&D in computer vision (Summer 2014) \& embedded systems (Winter 2014).
-
-\medskip
+%\hangafter=1
+%\hangindent=0.3in
+%(Summer 2014, Winter 2014, Summer 2015, \& Winter 2015)
+%\textbf{Intern: US Army Research Labs}, 
+%Computational Science Division (CSD) and Guidance Technology Branch (GTB).
+%\bullitem
+%CSD --- R\&D in autonomous driving (Summer 2015) \&
+%virtual reality (Winter 2015).
+%\bullitem
+%GTB --- R\&D in computer vision (Summer 2014) \& embedded systems (Winter 2014).
+%
+%\medskip
 
 \section*{Awards}
 
-\textbf{Cunningham Doctoral Fellowship} (2016--2020).
+\textbf{Cunningham Doctoral Fellow} (2016--2020).
 The 
 \href{https://graduateschool.vt.edu/funding/types-of-funding/funding-sponsored-by-the-graduate-school/cunningham-doctoral-assistantships.html}
 {Cunningham doctoral fellowship} is a Virginia Tech graduate school wide
 award, guaranteeing 4 years of research funding.
 
-\textbf{Davenport Leadership Fellowship} (2016--17 \& 2019--20).
+\textbf{Davenport Leadership Fellow} (2016--17 \& 2019--20).
 The Davenport leadership fellowship is a supplemental award given by
-the College of Engineering on a per-year basis.
+Virginia Tech, College of Engineering on a per-year basis.
 
 \textbf{DOE SCGSR Awardee} (2019).
 One of 70 proposals funded by the United States Dept.\ of Energy,
 Office of Science Graduate Student Research program, during the
 \href{https://www.energy.gov/articles/doe-s-science-graduate-student-research-program-selects-70-students-pursue-research-doe}{2018, 2nd call for proposals}.
-Award based on peer review of proposal by scientific experts.
 
-\textbf{Pratt Fellowship} (2017--18 \& 2018--19).
+\textbf{Pratt Fellow} (2017--18 \& 2018--19).
 The Pratt fellowship is a supplemental award given by
-the College of Engineering on a per-year basis.
+Virginia Tech, College of Engineering on a per-year basis.
 
 \section*{Publicly Available Software}
 
-\textbf{DELAUNAYSPARSE} is an open source software package
-for computing the Delaunay interpolant in medium to high dimensions.
-Both serial and parallel (\texttt{OpenMP}) drivers are available
-with interfaces available for
+\textbf{DELAUNAYSPARSE} is a software package for computing the Delaunay
+interpolant in medium to high dimensions.
+Both serial and parallel drivers are available with interfaces in
 \texttt{Fortran},
 \texttt{C/C++},
 \texttt{Python 3.6+},
-and batch/command line.
-The download is available from GitHub
-\url{https://github.com/vtopt/DelaunaySparse}.
+and command line.
+Download: \url{https://vtopt.github.io/DelaunaySparse}.
 
 \textbf{QAML} is a \texttt{Python} package for embedding polynomial sum of
-squares minimization problems (with real, integer, or boolean variables) on
-the \texttt{D-Wave 2000Q} system.
-The project can be cloned or forked from GitHub
-\url{https://github.com/tchlux/qaml}.
+squares minimization problems on the D-Wave quantum annealer.
+Download: \url{https://github.com/tchlux/qaml}.
+
+\section*{Pending Software}
+
+\textbf{VTMOP} is a solver and framework for computationally
+expensive blackbox multiobjective optimization problems with continuous
+variables and 2+ objectives.
+Written in \texttt{Fortran}; a \texttt{Python} interface is also available
+through \texttt{libEnsemble} (\url{https://github.com/libensemble/libensemble}).
 
 \nociteshortlist{*}
+\nocitesubs{*}
 \bibliographystyleshortlist{cv}
+\bibliographystylesubs{cv}
 \bibliographyshortlist{shortlist}
+\bibliographysubs{subs}
 
 \section*{Professional Activities}
 
 \textbf{Referee:} For
-Journal of Machine Learning Research (2019) and
+Journal of Machine Learning Research (2019);
 IEEE SoutheastCon (2018 -- 2020).
 
-\textbf{Session Vice-Chair:} IEEE SoutheastCon (2018).
+\textbf{Session Chair:}
+SIAM Conference on Computational Science and Engineering (2021);
+SIAM Conference on Optimization (2021);
+IEEE SoutheastCon (2018).
 
 \textbf{Counselor / Founding Member:} Virginia Tech CS Graduate Counsel 
 (Fall, 2017 -- Fall, 2019).
