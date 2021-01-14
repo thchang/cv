@@ -1,9 +1,9 @@
 % Standard preamble
 \documentclass[11pt]{article}
-\usepackage{geometry, hyperref, sectsty}
+\usepackage{geometry, hyperref, sectsty, helvet}
 \usepackage[resetlabels]{multibib}
 \newcites{shortlist,subs}
-{Selected Publications (from 17 total),Under Review}
+{Selected Publications (from 17 total),Under Review (from 3 total)}
 
 \makeatletter
 \def\@biblabel#1{}
@@ -24,9 +24,12 @@ top=0.75in}
 % left=20mm,
 % top=10mm,
 %}
+
 \parindent = 0pt
 \parskip = 6pt
-\sectionfont{\fontsize{13.2}{6}\selectfont}
+
+\renewcommand{\familydefault}{\sfdefault}
+\sectionfont{\fontsize{12}{0}\selectfont}
 
 % Define bullet
 \def\bullitem{\par\hangindent=15pt \hangafter=1
@@ -37,19 +40,19 @@ top=0.75in}
 % Header/Contact Info
 {\large \textbf{Tyler H.\ Chang}}
 
-\begin{tabular}{ll}
-   Argonne National Laboratory
-      & Email: \href{mailto:tchang@anl.gov}{tchang@anl.gov}\\
-   Mathematics and Computer Science Division
-      & Website: \url{http://thchang.github.io}\\
-   9700 S.\ Cass Ave.\ Bldg.\ 240, Lemont, IL 60439
-      & GitHub: \url{http://github.com/thchang} \\
+\begin{tabular}{llll}
+    Argonne National Laboratory & $\quad$
+        & Email:&\href{mailto:tchang@anl.gov}{tchang@anl.gov}\\
+    Mathematics and Computer Science (MCS) Division & $\quad$
+        & Website:&\url{http://thchang.github.io}\\
+    9700 S.\ Cass Ave.\ Bldg.\ 240, Lemont, IL 60439 & $\quad$
+        & GitHub:&\url{http://github.com/thchang} \\
 \end{tabular}
 
 % Begin document
-%\section*{Primary Interests}
-%
-%Optimization, machine learning, algorithms, and parallel computing.
+\section*{Primary Interests}
+
+Optimization, machine learning, algorithms, and parallel computing.
 
 \section*{Education}
 
@@ -67,8 +70,8 @@ Virginia Wesleyan University, \textit{Summa Cum Laude}
 \hangafter=1
 \hangindent=0.3in
 (June, 2020 -- Present)
-\textbf{Postdoctoral Appointee: Argonne National Lab},
-Mathematics and Computer Science (MCS) Division.
+\textbf{Postdoc: Argonne National Lab},
+Math.\ and Computer Science (MCS) Div.
 \bullitem R\&D in multiobjective optimization, parallel computing, and
 scientific software.
 \bullitem Member of FASTMATH: A SciDAC institute spanning
@@ -145,6 +148,8 @@ Office of Science Graduate Student Research program, during the
 The Pratt fellowship is a supplemental award given by
 Virginia Tech, College of Engineering on a per-year basis.
 
+\newpage
+
 \section*{Publicly Available Software}
 
 \textbf{DELAUNAYSPARSE} is a software package for computing the Delaunay
@@ -169,7 +174,7 @@ Written in \texttt{Fortran}; a \texttt{Python} interface is also available
 through \texttt{libEnsemble} (\url{https://github.com/libensemble/libensemble}).
 
 \nociteshortlist{*}
-\nocitesubs{*}
+\nocitesubs{chang2020algorithm}
 \bibliographystyleshortlist{cv}
 \bibliographystylesubs{cv}
 \bibliographyshortlist{shortlist}

@@ -26,7 +26,10 @@ top=0.75in}
 %}
 \parindent = 0pt
 \parskip = 6pt
-\sectionfont{\fontsize{15}{6}\selectfont}
+
+% Set font/section font
+\renewcommand{\familydefault}{\sfdefault}
+\sectionfont{\fontsize{14}{6}\selectfont}
 
 % Define bullet
 \def\bullitem{\par\hangindent=15pt \hangafter=1
@@ -37,13 +40,13 @@ top=0.75in}
 % Header/Contact Info
 {\large \textbf{Tyler H.\ Chang}}
 
-\begin{tabular}{ll}
-   Argonne National Laboratory
-      & Email: \href{mailto:tchang@anl.gov}{tchang@anl.gov}\\
-   Mathematics and Computer Science Division
-      & Website: \url{http://thchang.github.io}\\
-   9700 S.\ Cass Ave.\ Bldg.\ 240, Lemont, IL 60439
-      & GitHub: \url{http://github.com/thchang} \\
+\begin{tabular}{llll}
+   Argonne National Laboratory & $\quad$
+      & Email:&\hskip -3pt \href{mailto:tchang@anl.gov}{tchang@anl.gov}\\
+   Mathematics and Computer Science (MCS) Division & $\quad$
+      & Website:&\hskip -3pt \url{http://thchang.github.io}\\
+   9700 S.\ Cass Ave.\ Bldg.\ 240, Lemont, IL 60439 & $\quad$
+      & GitHub:&\hskip -3pt \url{http://github.com/thchang} \\
 \end{tabular}
 
 % Begin document
@@ -55,13 +58,13 @@ for applications in scientific computing, data science, and engineering design.
 
 \section*{Education}
 
-Ph.D., 2020, Computer Science,
+Ph.D., May 2020, Computer Science,
 Virginia Polytechnic Institute \& State University
 (Virginia Tech)
 
 \medskip
 
-B.S., 2016, Computer Science \& Mathematics,
+B.S., May 2016, Computer Science \& Mathematics,
 Virginia Wesleyan University, \textit{Summa Cum Laude}
 
 \section*{Research Experience}
@@ -69,8 +72,8 @@ Virginia Wesleyan University, \textit{Summa Cum Laude}
 \hangafter=1
 \hangindent=0.3in
 (June, 2020 -- Present)
-\textbf{Postdoctoral Appointee: Argonne National Lab},
-Mathematics and Computer Science (MCS) Division.
+\textbf{Postdoc: Argonne National Lab},
+Math.\ \& Computer Science (MCS) Div.
 \bullitem R\&D in multiobjective optimization, parallel computing, and
 scientific software.
 \bullitem Member of FASTMATH: A SciDAC institute spanning
@@ -125,6 +128,8 @@ virtual reality (Winter 2015).
 GTB --- R\&D in computer vision (Summer 2014) \& embedded systems (Winter 2014).
 
 \medskip
+
+\newpage
 
 \section*{Awards}
 
