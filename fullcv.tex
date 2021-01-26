@@ -1,6 +1,6 @@
 % Standard preamble
 \documentclass[12pt]{article}
-\usepackage{geometry, hyperref, sectsty}
+\usepackage{geometry, hyperref, sectsty, titlesec}
 \usepackage[resetlabels]{multibib}
 \newcites{pubs,inps,subs,talks}
 {Peer-Reviewed Publications,In Press,Under Review,Contributed Talks}
@@ -27,13 +27,19 @@ top=0.75in}
 \parindent = 0pt
 \parskip = 6pt
 
-% Set font/section font
+% Set font
 \renewcommand{\familydefault}{\sfdefault}
-\sectionfont{\fontsize{14}{6}\selectfont}
+
+% Set title size/spacing
+\sectionfont{\fontsize{14}{4}\selectfont}
+\titlespacing*{\section}{0pt}{14pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
 
 % Define bullet
 \def\bullitem{\par\hangindent=15pt \hangafter=1
 \noindent\hbox to 20pt{\hfil$\bullet$\hfil}\ignorespaces}
+
+% Define hrulefull
+\def\hrulefull{\noindent\rule{\textwidth}{0.2pt}}
 
 \begin{document}
 
@@ -50,12 +56,16 @@ top=0.75in}
 \end{tabular}
 
 % Begin document
+\medskip
+\hrulefull
 \section*{Primary Interests}
 
 Numerical optimization, interpolation and regression, algorithms,
 and parallel computing
 for applications in scientific computing, data science, and engineering design.
 
+\medskip
+\hrulefull
 \section*{Education}
 
 Ph.D., May 2020, Computer Science,
@@ -67,6 +77,8 @@ Virginia Polytechnic Institute \& State University
 B.S., May 2016, Computer Science \& Mathematics,
 Virginia Wesleyan University, \textit{Summa Cum Laude}
 
+\medskip
+\hrulefull
 \section*{Research Experience}
 
 \hangafter=1
@@ -152,6 +164,8 @@ Office of Science Graduate Student Research program, during the
 The Pratt fellowship is a supplemental award given by
 Virginia Tech, College of Engineering on a per-year basis.
 
+\medskip
+\hrulefull
 \section*{Publicly Available Software}
 
 \textbf{DELAUNAYSPARSE} is a software package for computing the Delaunay
@@ -167,6 +181,8 @@ Download: \url{https://vtopt.github.io/DelaunaySparse}.
 squares minimization problems on the D-Wave quantum annealer.
 Download: \url{https://github.com/tchlux/qaml}.
 
+\medskip
+\hrulefull
 \section*{Pending Software}
 
 \textbf{VTMOP} is a solver and framework for computationally
@@ -183,11 +199,23 @@ through \texttt{libEnsemble} (\url{https://github.com/libensemble/libensemble}).
 \bibliographystyleinps{cv}
 \bibliographystylesubs{cv}
 \bibliographystyletalks{cv}
+
+\medskip
+\hrulefull
 \bibliographypubs{pubs}
+
+\newpage
 \bibliographyinps{inps}
+
+\medskip
+\hrulefull
 \bibliographysubs{subs}
+
+\medskip
+\hrulefull
 \bibliographytalks{talks}
 
+\newpage
 \section*{Professional Activities}
 
 \textbf{Referee:} For
@@ -206,6 +234,8 @@ ACM (2015 -- Present); SIAM (2016 -- Present); SCS (2020 -- Present).
 Organizing professional and social events for
 current and prospective graduate students.
 
+\medskip
+\hrulefull
 \section*{Teaching Experience}
 
 \hangafter=1
