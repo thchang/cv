@@ -1,6 +1,6 @@
 % Standard preamble
 \documentclass[11pt]{article}
-\usepackage{geometry, hyperref, sectsty, titlesec, helvet}
+\usepackage{geometry, hyperref, sectsty, helvet}
 \usepackage[resetlabels]{multibib}
 \newcites{shortlist,subs}
 {Selected Publications (from 17 total),Under Review (from 3 total)}
@@ -26,14 +26,14 @@ top=0.75in}
 %}
 
 \parindent = 0pt
-\parskip = 6pt
+\parskip = 4pt
 
 % Set the default font
 \renewcommand{\familydefault}{\sfdefault}
 
 % Set the title size/spacing
-\sectionfont{\fontsize{12}{0}\selectfont}
-\titlespacing*{\section}{0pt}{12pt plus 3pt minus 3pt}{3pt plus 1pt minus 1pt}
+\sectionfont{\fontsize{12}{14}\selectfont\sectionrule{0ex}{0pt}{-1ex}{1pt}}
+%\titlespacing*{\section}{0pt}{12pt plus 3pt minus 3pt}{3pt plus 1pt minus 1pt}
 
 % Define bullet
 \def\bullitem{\par\hangindent=15pt \hangafter=1
@@ -57,14 +57,10 @@ top=0.75in}
 \end{tabular}
 
 % Begin document
-\smallskip
-\hrulefull
 \section*{Primary Interests}
 
 Optimization, machine learning, algorithms, and parallel computing.
 
-\smallskip
-\hrulefull
 \section*{Education}
 
 Ph.D., May 2020, Computer Science,
@@ -76,8 +72,6 @@ Virginia Polytechnic Institute \& State University
 B.S., May 2016, Computer Science \& Mathematics,
 Virginia Wesleyan University, \textit{Summa Cum Laude}
 
-\smallskip
-\hrulefull
 \section*{Research Experience}
 
 \hangafter=1
@@ -125,8 +119,6 @@ Dept.\ of Computer Science.
 R\&D in GPU computing and parallelization of NASA's FUN3D CFD kernel on
 NVIDIA GPUs.
 
-\medskip
-
 %\hangafter=1
 %\hangindent=0.3in
 %(Summer 2014, Winter 2014, Summer 2015, \& Winter 2015)
@@ -140,8 +132,6 @@ NVIDIA GPUs.
 %
 %\medskip
 
-\smallskip
-\hrulefull
 \section*{Awards}
 
 \textbf{Cunningham Doctoral Fellow} (2016--2020).
@@ -180,8 +170,6 @@ Download: \url{https://vtopt.github.io/DelaunaySparse}.
 squares minimization problems on the D-Wave quantum annealer.
 Download: \url{https://github.com/tchlux/qaml}.
 
-\smallskip
-\hrulefull
 \section*{Pending Software}
 
 \textbf{VTMOP} is a solver and framework for computationally
@@ -190,21 +178,15 @@ variables and 2+ objectives.
 Written in \texttt{Fortran}; a \texttt{Python} interface is also available
 through \texttt{libEnsemble} (\url{https://github.com/libensemble/libensemble}).
 
-\nociteshortlist{*}
-\nocitesubs{chang2020algorithm}
 \bibliographystyleshortlist{cv}
 \bibliographystylesubs{cv}
 
-\smallskip
-\hrulefull
+\nociteshortlist{*}
 \bibliographyshortlist{shortlist}
 
-\smallskip
-\hrulefull
+\nocitesubs{chang2020algorithm}
 \bibliographysubs{subs}
 
-\smallskip
-\hrulefull
 \section*{Professional Activities}
 
 \textbf{Referee:} For
