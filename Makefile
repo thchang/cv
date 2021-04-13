@@ -16,7 +16,6 @@ fullcv.pdf : fullcv.tex $(FULLBIBS)
 shortcv.pdf : shortcv.tex $(SHORTBIBS)
 	pdflatex shortcv.tex
 	bibtex shortlist.aux
-	bibtex subs.aux
 	pdflatex shortcv.tex
 	pdflatex shortcv.tex
 	rm -f *.bbl *.aux *.blg *.out
